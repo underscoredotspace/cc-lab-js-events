@@ -34,6 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   deleteAll.addEventListener('click', function(e) {
     console.log('delete all clicked')
+    const readingList = document.querySelector('#reading-list')
+
+    const readingListArray = Array.from(readingList.children)
+    for (const element of readingListArray) {
+      element.remove()
+    }
+
+    // while (readingList.lastChild) {
+    //   readingList.removeChild(readingList.lastChild)
+    // }
   })
 
 })
